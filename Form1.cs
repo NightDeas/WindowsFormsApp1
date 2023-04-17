@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -24,7 +25,15 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+         
+        }
+
+        private void button_GenerateNumber_Click(object sender, EventArgs e)
+        {
+            Random rnd = new Random();
+            int a = rnd.Next(1, 5);
+            label1.Text = a.ToString();
+
         }
     }
 }
